@@ -32,4 +32,12 @@ class FizzBuzzConverterTest {
         assertThat(result).isEqualTo("Buzz");
     }
 
+    @ParameterizedTest
+    @ValueSource(ints = {1, 2, 4, 94, 97, 98})
+    void should_convert_to_self_string_when_common_number(int number) {
+        String result = FizzBuzzConverter.convert(number);
+
+        assertThat(result).isEqualTo(String.valueOf(number));
+    }
+
 }

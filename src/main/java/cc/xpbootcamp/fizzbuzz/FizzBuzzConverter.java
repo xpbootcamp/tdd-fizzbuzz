@@ -12,6 +12,6 @@ public class FizzBuzzConverter {
         if (number % 5 == 0){
             return  "Buzz";
         }
-        return null;
+        return String.valueOf(number);
     }
 }
