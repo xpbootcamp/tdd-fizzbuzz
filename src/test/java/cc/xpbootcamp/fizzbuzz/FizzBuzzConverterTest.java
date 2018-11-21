@@ -40,4 +40,10 @@ class FizzBuzzConverterTest {
         assertThat(result).isEqualTo(String.valueOf(number));
     }
 
+    @ParameterizedTest
+    @ValueSource(ints = {0, 101})
+    void should_throw_exception_when_out_of_range(int number) {
+        assertThrows(IllegalArgumentException.class, () -> FizzBuzzConverter.convert(number));
+    }
+
 }
