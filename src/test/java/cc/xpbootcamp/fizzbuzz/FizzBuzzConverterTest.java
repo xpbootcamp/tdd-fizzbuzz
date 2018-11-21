@@ -24,4 +24,12 @@ class FizzBuzzConverterTest {
         assertThat(result).isEqualTo("Fizz");
     }
 
+    @ParameterizedTest
+    @ValueSource(ints = {5, 10, 20, 85, 95, 100})
+    void should_convert_to_buzz_when_5_multiple(int number) {
+        String result = FizzBuzzConverter.convert(number);
+
+        assertThat(result).isEqualTo("Buzz");
+    }
+
 }
