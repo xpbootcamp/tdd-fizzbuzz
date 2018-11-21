@@ -16,4 +16,12 @@ class FizzBuzzConverterTest {
         assertThat(result).isEqualTo("FizzBuzz");
     }
 
+    @ParameterizedTest
+    @ValueSource(ints = {3, 6, 12, 18, 21, 99})
+    void should_convert_to_fizz_when_3_multiple(int number) {
+        String result = FizzBuzzConverter.convert(number);
+
+        assertThat(result).isEqualTo("Fizz");
+    }
+
 }
