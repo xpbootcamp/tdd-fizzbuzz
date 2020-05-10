@@ -23,4 +23,13 @@ public class FizzBuzzTest {
         Assert.assertEquals("Whizz",fb.SayNumbers(14));
     }
 
+    @Test
+    public void when_give_a_num_divided_by_many_nums(){
+        FizzBuzz fb = new FizzBuzz();
+        Assert.assertEquals("FizzBuzz",fb.SayNumbers(15));
+        Assert.assertEquals("FizzWhizz",fb.SayNumbers(21));
+        Assert.assertEquals("BuzzWhizz",fb.SayNumbers(35));
+        Assert.assertEquals("FizzBuzzWhizz",fb.SayNumbers(105));
+    }
+
 }
