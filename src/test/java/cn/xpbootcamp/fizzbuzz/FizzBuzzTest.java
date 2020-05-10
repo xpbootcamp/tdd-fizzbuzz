@@ -26,10 +26,10 @@ public class FizzBuzzTest {
     @Test
     public void when_give_a_num_divided_by_many_nums(){
         FizzBuzz fb = new FizzBuzz();
-        Assert.assertEquals("FizzBuzz",fb.SayNumbers(15));
+        Assert.assertEquals("FizzBuzz",fb.SayNumbers(60));
         Assert.assertEquals("FizzWhizz",fb.SayNumbers(21));
         Assert.assertEquals("BuzzWhizz",fb.SayNumbers(140));
-        Assert.assertEquals("FizzBuzzWhizz",fb.SayNumbers(105));
+        Assert.assertEquals("FizzBuzzWhizz",fb.SayNumbers(210));
     }
 
     @Test
@@ -37,6 +37,14 @@ public class FizzBuzzTest {
         FizzBuzz fb = new FizzBuzz();
         Assert.assertEquals("Fizz",fb.SayNumbers(13));
         Assert.assertEquals("Fizz",fb.SayNumbers(30));
+    }
+
+    @Test
+    public void when_give_a_num_contain_5(){
+        FizzBuzz fb = new FizzBuzz();
+        Assert.assertEquals("BuzzWhizz",fb.SayNumbers(35));
+        Assert.assertEquals("Buzz",fb.SayNumbers(50));
+        Assert.assertEquals("BuzzWhizz",fb.SayNumbers(105));
     }
 
 }
