@@ -28,8 +28,15 @@ public class FizzBuzzTest {
         FizzBuzz fb = new FizzBuzz();
         Assert.assertEquals("FizzBuzz",fb.SayNumbers(15));
         Assert.assertEquals("FizzWhizz",fb.SayNumbers(21));
-        Assert.assertEquals("BuzzWhizz",fb.SayNumbers(35));
+        Assert.assertEquals("BuzzWhizz",fb.SayNumbers(140));
         Assert.assertEquals("FizzBuzzWhizz",fb.SayNumbers(105));
+    }
+
+    @Test
+    public void when_give_a_num_contain_3(){
+        FizzBuzz fb = new FizzBuzz();
+        Assert.assertEquals("Fizz",fb.SayNumbers(13));
+        Assert.assertEquals("Fizz",fb.SayNumbers(30));
     }
 
 }
