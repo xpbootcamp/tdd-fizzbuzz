@@ -47,4 +47,13 @@ public class FizzBuzzTest {
         Assert.assertEquals("BuzzWhizz",fb.SayNumbers(105));
     }
 
+    @Test
+    public void when_give_a_num_contain_7(){
+        FizzBuzz fb = new FizzBuzz();
+        Assert.assertEquals("Fizz",fb.SayNumbers(75));
+        Assert.assertEquals("Fizz",fb.SayNumbers(57));
+        Assert.assertEquals("FizzWhizz",fb.SayNumbers(357));
+        Assert.assertEquals("Fizz",fb.SayNumbers(37));
+    }
+
 }

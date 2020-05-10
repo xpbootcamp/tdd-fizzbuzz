@@ -27,16 +27,27 @@ public class FizzBuzz {
         boolean Is7 = (inputNum % 7 == 0);
         boolean Contain3 = result.contains("3");
         boolean Contain5 = result.contains("5");
+        boolean Contain7 = result.contains("7");
 
-        if (Contain5){
-            flag = (1 << (Is5 ? 2 : 0)) | (1 << (Is7 ? 3 : 0));
-        } else if (Contain3){
-            flag = 1 << 4;
+        if (Contain7) {
+            if (Contain5) {
+                flag = (1 << (Is3 ? 1 : 0)) | (1 << (Is7 ? 3 : 0));
+            } else if (Contain3) {
+                flag = 1 << 4;
+            } else {
+                flag = (1 << (Is3 ? 1 : 0)) | (1 << (Is7 ? 3 : 0));
+            }
         } else {
-            flag = (1 << (Is3 ? 1 : 0)) | (1 << (Is5 ? 2 : 0)) | (1 << (Is7 ? 3 : 0));
+            if (Contain5) {
+                flag = (1 << (Is5 ? 2 : 0)) | (1 << (Is7 ? 3 : 0));
+            } else if (Contain3) {
+                flag = 1 << 4;
+            } else {
+                flag = (1 << (Is3 ? 1 : 0)) | (1 << (Is5 ? 2 : 0)) | (1 << (Is7 ? 3 : 0));
+            }
         }
         flag &= (~1);
-        System.out.println(Integer.toBinaryString(flag));
+//        System.out.println(Integer.toBinaryString(flag));
         switch (flag) {
             case contain3:
             case fizz:
