@@ -26,6 +26,18 @@
 - When：报数
 - Then： FizzBuzzWhizz
 
+- Given: 包含3
+- When：报数
+- Then：忽略以上全部条件，Fizz
+
+- Given：包含5
+- When：报数
+- Then：忽略包含3的判断，忽略3的倍数的判断
+
+- Given：包含7
+- When：报数
+- Then：判断3的倍数，忽略5的倍数的判断
+
 - Given： 其他数字
 - When： 报数
 - Then： 其他数字
